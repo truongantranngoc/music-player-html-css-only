@@ -1,0 +1,137 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/theme-desktop.png");
+  background-position: center;
+  background-size: cover;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(17px);
+  --webkit-backdrop-filter: blur(17px);
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  /* Hiệu ứng pop-up css cho đẹp */
+  transition: height 0.3s ease;
+}
+
+.sidebar:hover {
+  /* Rê chuột sẽ hiện (kéo dài thành bar) */
+  width: 250px;
+}
+.sidebar .logo {
+  /* Căn chỉnh cho cái hình logo */
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 25px 10px 15px;
+}
+.logo img {
+  width: 43px;
+  border-radius: 50%;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 15px;
+  display: none;
+  /* Khi bth sẽ ko hiện tên Hao hao, khi hover sẽ hiện  */
+}
+.sidebar:hover .logo h2 {
+  display: block;
+}
+.sidebar .links {
+  list-style: none;
+  margin-top: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  height: calc(100% -140px);
+}
+.sidebar .links::-webkit-scrollbar {
+  display: none;
+}
+.links li {
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+}
+.links li:hover {
+  /* Đổi hiện ứng màu trắng và hình con trỏ chuột */
+  cursor: pointer;
+  background: #fff;
+}
+.links h4 {
+  color: #222;
+  font-weight: 500;
+  display: none;
+  margin-bottom: 10px;
+}
+.sidebar:hover .links hr {
+  border-color: transparent;
+}
+.links li a {
+  padding: 10px;
+  color: #000;
+  display: none;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.sidebar:hover .links li a {
+  display: block;
+}
+.links li span {
+  /* Căn chỉnh giữa các items trong side bar */
+  margin: 12px 10px;
+}
+.content .music {
+  display: flex;
+  margin-left: 100px;
+  flex-direction: column;
+}
+.content .music-head {
+  display: flex;
+  flex: 0 0 auto;
+  background-color: aqua;
+  margin-left: 100px;
+  border-radius: 5px;
+}
+.content .music-list li {
+  display: flex;
+  margin-left: 100px;
+  flex-direction: column;
+  /* background-color: #231b2e; */
+  margin-top: 3px;
+  border-radius: 15px;
+  padding: 7px 7px 7px 7px;
+  box-shadow: 0px 3px 0px wheat;
+}
+.music-head .music .control-btns {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  justify-content: space-around;
+   
+}
